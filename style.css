@@ -102,9 +102,6 @@ section {
   justify-content: space-between;
   padding: 0.1875rem;
 }
-.name {
-  text-align: center;
-}
 
 .datas li .red {
   color: var(--sub-color);
