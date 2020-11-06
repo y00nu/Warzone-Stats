@@ -92,7 +92,7 @@ section {
   width: 50%;
   max-width: 400px;
   margin-top: var(--sm-margin);
-  font-size: var(--md-font);
+  font-size: var(--sm-font);
   display: none;
 }
 
@@ -100,6 +100,10 @@ section {
   list-style: none;
   display: flex;
   justify-content: space-between;
+  padding: 0.1875rem;
+}
+.name {
+  text-align: center;
 }
 
 .datas li .red {
@@ -110,10 +114,7 @@ section {
   display: block;
 }
 
-@media screen and (max-width: 606px) {
-  .datas {
-    font-size: var(--sm-font);
-  }
+@media screen and (max-width: 800px) {
   .datas li {
     flex-direction: column;
     justify-content: center;

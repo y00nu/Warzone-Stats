@@ -46,6 +46,7 @@ function getStats(name, tag) {
         승률: winRatio,
         매치: gamesPlayed,
       };
+      datas.innerHTML = `<li>${name}</li>`;
       for (const key in person) {
         addNewElement(key, person[key]);
       }
@@ -64,8 +65,6 @@ function getData() {
 
 function addNewElement(name, value) {
   const data = document.createElement('li');
-  console.log(data);
-  data.classList.add('data');
   data.innerHTML = `<span>${name}</span><span class = "red">${value}</span>`;
   console.log(datas);
   datas.appendChild(data);
