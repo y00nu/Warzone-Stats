@@ -17,18 +17,23 @@
 }
 
 body {
-  height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  height: 100vh;
   background-color: white;
+}
+
+.wrapper {
+  width: 90%;
 }
 
 header {
   display: flex;
   flex-direction: column;
   align-items: center;
+  text-align: center;
 }
 
 header h1 {
@@ -56,10 +61,12 @@ section {
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: 100%;
 }
 
 #search-box input {
-  width: 50rem;
+  width: 70%;
+  max-width: 700px;
   padding: 0.8125rem;
   padding-left: 1.875rem;
   font-size: var(--sm-font);
@@ -82,7 +89,8 @@ section {
 }
 
 .datas {
-  width: 25rem;
+  width: 50%;
+  max-width: 400px;
   margin-top: var(--sm-margin);
   font-size: var(--md-font);
   display: none;
@@ -100,4 +108,15 @@ section {
 
 .clicked {
   display: block;
+}
+
+@media screen and (max-width: 606px) {
+  .datas {
+    font-size: var(--sm-font);
+  }
+  .datas li {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
 }
