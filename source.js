@@ -9,6 +9,15 @@ inputBox.addEventListener('keydown', e => {
   }
 });
 
+class Person {
+  constructor(kd, kAverage, wRatio, gPlayed) {
+    this.킬뎃 = kd;
+    this.평균처치 = kAverage;
+    this.승률 = wRatio;
+    this.매치 = gPlayed;
+  }
+}
+
 function splitNameAndTag(n) {
   let name;
   let tag;
@@ -40,12 +49,7 @@ function getStats(name, tag) {
       const averageKill = (warzone.kills / warzone.gamesPlayed).toFixed(1);
       const kdRatio = warzone.kdRatio.toFixed(2);
       const winRatio = ((warzone.wins / warzone.gamesPlayed) * 100).toFixed(1);
-      const person = {
-        킬뎃: kdRatio,
-        평균처치: averageKill,
-        승률: winRatio,
-        매치: gamesPlayed,
-      };
+      const person = new Person(kdRatio, averageKill, winRatio, gamesPlayed);
       datas.innerHTML = `<li>${name}</li>`;
       for (const key in person) {
         addNewElement(key, person[key]);
@@ -66,6 +70,5 @@ function getData() {
 function addNewElement(name, value) {
   const data = document.createElement('li');
   data.innerHTML = `<span>${name}</span><span class = "red">${value}</span>`;
-  console.log(datas);
   datas.appendChild(data);
 }

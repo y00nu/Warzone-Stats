@@ -35,12 +35,20 @@ header {
   align-items: center;
   text-align: center;
 }
-
 header h1 {
+  margin-bottom: var(--sm-margin);
+}
+
+header h1 a {
   font-size: var(--bg-font);
   line-height: 4.5rem;
-  margin-bottom: var(--sm-margin);
   color: var(--main-color);
+  text-decoration: none;
+  transition: color 0.4s ease;
+}
+
+header h1 a:hover {
+  color: var(--sub-color);
 }
 
 header h2 {
